@@ -1,81 +1,77 @@
-# Student Sleep Patterns Analysis
+# Numerical Integration Methods in Python
 
-## Overview
-This project analyzes the relationship between **age** and various lifestyle factors (screen time, sleep duration, caffeine intake, study hours, and physical activity) among students. The analysis uses **linear regression**, **k-nearest neighbors (KNN)**, and **logistic regression** to model and predict these relationships.
+![Numerical Integration](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Numerical_integration.svg/1200px-Numerical_integration.svg.png)
 
----
-
-## Dataset
-- **Source:** `student_sleep_patterns.csv`
-- **Features:**
-  - `Age`
-  - `Screen_Time`
-  - `Sleep_Duration`
-  - `Caffeine_Intake`
-  - `Study_Hours`
-  - `Physical_Activity`
+**Numerical Integration Methods** is a Python project that demonstrates how to approximate definite integrals using the **Rectangular Method** and **Trapezoidal Method**. These methods are foundational in numerical analysis and are widely used in scientific computing, engineering, and data analysis.
 
 ---
 
-## Analysis & Models
-
-### 1. Linear Regression
-Predicts the following dependent variables using `Age` as the independent variable:
-- **Screen Time**
-- **Sleep Duration**
-- **Caffeine Intake**
-- **Study Hours**
-- **Physical Activity**
-
-**Metrics:**
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- Root Mean Squared Error (RMSE)
-- R-squared (R²)
-- Mean Absolute Percentage Error (MAPE)
-
-### 2. K-Nearest Neighbors (KNN)
-- Predicts `Sleep_Duration` based on `Age` (normalized).
-- Uses `k=5` neighbors.
-
-### 3. Logistic Regression
-- Classifies `Screen_Time` as **High** or **Low** (based on median) using `Age`.
-- Outputs accuracy and classification report.
+## 📌 Table of Contents
+- [Introduction](#introduction)
+- [Methods](#methods)
+  - [Rectangular Method](#rectangular-method)
+   - [Trapezoidal Method](#trapezoidal-method)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-## Visualizations
-- Scatter plots with regression lines for each linear model.
-- Actual vs. predicted plots for KNN and logistic regression.
+## 📊 Introduction
+Numerical integration is a technique used to approximate the value of a definite integral when an analytical solution is difficult or impossible to obtain. This project provides Python implementations of two popular numerical integration methods:
+
+1. **Rectangular Method**: Uses rectangles to approximate the area under a curve.
+2. **Trapezoidal Method**: Uses trapezoids to approximate the area under a curve.
+
+These methods are particularly useful for integrating complex functions or data sets where traditional calculus techniques are not feasible.
 
 ---
 
-## How to Run
-1. Ensure you have the required libraries:
-   ```bash
-   pip install pandas numpy scikit-learn matplotlib
-   ```
-2. Place `student_sleep_patterns.csv` in your working directory.
-3. Run the script.
+## 🔧 Methods
 
 ---
 
-## Key Findings
-- **Age vs. Screen Time:** [Brief insight, e.g., "Screen time tends to decrease with age."]
-- **Age vs. Sleep Duration:** [Brief insight]
-- **Age vs. Caffeine Intake:** [Brief insight]
-- **Age vs. Study Hours:** [Brief insight]
-- **Age vs. Physical Activity:** [Brief insight]
+### Rectangular Method
+The Rectangular Method approximates the integral by dividing the area under the curve into rectangles and summing their areas.
+
+- **Formula**:
+  \[
+  \int_{a}^{b} f(x) \,dx \approx \Delta x \sum_{i=1}^{n} f(x_i^*)
+  \]
+  where \( x_i^* \) is the midpoint of each subinterval.
+
+- **Use Case**: Simple and easy to implement, but generally less accurate compared to other methods like the Trapezoidal or Simpson's Rule.
 
 ---
 
-## Future Work
-- Explore multivariate regression with more features.
-- Experiment with other classification algorithms.
-- Collect more data for robust modeling.
+### Trapezoidal Method
+The Trapezoidal Method approximates the integral by dividing the area under the curve into trapezoids and summing their areas. This method is more accurate than the Rectangular Method because it accounts for the slope of the function between points.
+
+- **Formula**:
+  \[
+  \int_{a}^{b} f(x) \,dx \approx \frac{\Delta x}{2} \left[ f(x_0) + 2 \sum_{i=1}^{n-1} f(x_i) + f(x_n) \right]
+  \]
+  where:
+  - \( \Delta x \) is the width of each subinterval.
+  - \( f(x_0) \) and \( f(x_n) \) are the function values at the endpoints of the interval.
+  - \( f(x_i) \) are the function values at intermediate points.
+
+- **Steps**:
+  1. Divide the interval \([a, b]\) into \( n \) equal subintervals.
+  2. Calculate the width of each subinterval, \( \Delta x = \frac{b-a}{n} \).
+  3. Evaluate the function at each endpoint and intermediate point.
+  4. Apply the Trapezoidal Rule formula to approximate the integral.
+
+- **Use Case**: The Trapezoidal Method is more accurate than the Rectangular Method, especially for smooth functions. It is widely used in scientific computing and engineering applications.
 
 ---
 
-## License
-[Specify if applicable, e.g., MIT, GPL, etc.]
+## 🛠 Installation
+To run this project, you need Python 3.x and the NumPy library. You can install NumPy using pip:
 
+```bash
+pip install numpy
+```
