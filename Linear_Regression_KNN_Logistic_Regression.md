@@ -170,6 +170,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
 import matplotlib.pyplot as plt
+data = pd.read_csv('student_sleep_patterns.csv')
 X = data[['Age']].values  # Feature: Age
 y = data['Sleep_Duration'].values  # Target: Sleep Duration
 scaler = StandardScaler()
@@ -200,8 +201,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 import pandas as pd
+data = pd.read_csv('student_sleep_patterns.csv')
 threshold = data['Screen_Time'].median()  
-data['Screen_Time_Class'] = np.where(data['Screen_Time'] > threshold, 1, 0)  
+data['Screen_Time_Class'] = np.where(data['Screen_Time'] > threshold, 1, 0)
 X = data[['Age']].values  # Age as the feature
 y = data['Screen_Time_Class'].values  # Categorical Screen_Time (High=1, Low=0)
 scaler = StandardScaler()
