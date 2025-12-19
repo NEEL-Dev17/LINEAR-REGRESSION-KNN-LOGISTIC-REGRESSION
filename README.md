@@ -12,7 +12,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [How It Works](#how-it-works)
-- [Examples](#examples)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -76,3 +75,44 @@ pip install pandas
 pip install matplotlib
 pip install Scikit-Learn
 ```
+
+## 🚀 Usage
+
+1. Clone this repository or download the script.
+2. Run the script in a Python environment.
+3. Enter the number of points (`n`) when prompted.
+
+```python
+# Example usage
+n = int(input("Enter total number of points: "))
+rectangular_method(n)
+trapezoidal_method(n)
+```
+
+## ⚙ How It Works
+
+Rectangular Method
+
+1. Divides the interval ([0, \pi]) into (n) equal subintervals.
+2. Calculates the midpoint of each subinterval.
+3. Computes the area of each rectangle using the function value at the midpoint.
+4. Sums the areas of all rectangles to approximate the integral.
+5. Trapezoidal Method
+
+Trapezoidal Method
+
+1. Divides the interval ([0, \pi]) into (n) equal subintervals.
+2. Uses the function values at the endpoints of each subinterval.
+3. Computes the area of each trapezoid.
+4. Sums the areas of all trapezoids to approximate the integral.
+
+## 📈 Results
+
+The accuracy of the approximation improves with a higher number of points (n).
+The interval for integration is fixed from (0) to (\pi) in both methods.
+
+## 🤝 Contributing
+Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
+
+## 📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
