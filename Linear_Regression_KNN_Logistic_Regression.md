@@ -169,6 +169,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 data = pd.read_csv('student_sleep_patterns.csv')
 X = data[['Age']].values  # Feature: Age
