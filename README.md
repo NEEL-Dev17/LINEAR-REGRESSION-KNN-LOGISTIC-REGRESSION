@@ -1,7 +1,5 @@
 # Numerical Integration Methods in Python
 
-![Numerical Integration](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Numerical_integration.svg/1200px-Numerical_integration.svg.png)
-
 **Numerical Integration Methods** is a Python project that demonstrates how to approximate definite integrals using the **Rectangular Method** and **Trapezoidal Method**. These methods are foundational in numerical analysis and are widely used in scientific computing, engineering, and data analysis.
 
 ---
