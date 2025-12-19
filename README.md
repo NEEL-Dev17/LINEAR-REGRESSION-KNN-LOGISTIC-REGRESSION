@@ -68,7 +68,7 @@ The Trapezoidal Method approximates the integral by dividing the area under the 
 ---
 
 ## 🛠 Installation
-To run this project, you need Python 3.x and the NumPy library. You can install NumPy using pip:
+To run this project, you need Python 3.x and the NumPy library. You can install NumPy, Pandas, Matplotlib and scikit-learn using pip:
 
 ```bash
 pip install numpy
